@@ -9,6 +9,103 @@ We consider two types of suggestions.
 
 \subsection{Collaboration Suggestion}
 
+We first .
+
+\begin{itemize}
+    \item Discussion break.
+    \item Structured collaboration.
+    \item Divide-and-conquer.
+\end{itemize}
+
+The advantage of these suggestions is that it is relatively easy to cold start: 
+we can define heuristics to support initial experiments.
+
+If proven effective, it would be useful to develop computational methods to identify optimal timing to determine when to offer such suggestions in the long run.
+
 \subsection{Content Suggestion}
 
+
+Based on user interviews in our preliminary experiments on slogan writing, we identify two distinct scenarios where lexical suggestions are useful.
+First, users may run out of ideas or struggle with proposing original ideas in the first place.
+Lexical suggestions at this stage functions as brainstorm sessions.
+It follows that the notion of relevant suggestions is intentionally vague and there does not exist {\em the} right word.
+We refer to such suggestions as ``{\em brainstorm suggestions}''.
+Second, users may find it difficult to identify the most appropriate word in a caption or a slogan.
+In this case, users already have a concrete idea and look for {\em the} word at a particular location.
+We refer to such suggestions as ``{\em lexical-choice suggestions}''.
+
+Compared to full-sentence suggestions, although grammaticality is no longer a concern, these two distinct suggestion modes require different computational models.
+In particular, ``brainstorm suggestions'' poses unique computational challenges from traditional natural language processing systems.
+One key difference lies in that useful ``brainstorm'' suggestions usually do not frequently cooccur and makes NLP techniques that rely on cooccurring patterns much less effective.
+% This idea echoes the benign violation theory in humor \citep{warren_opinion:_2015}: violation in humor does not happen frequently in life and cannot be arbitrary.
+We propose the following three components to address these computational challenges.
+
+\para{Relevant data collection.} 
+The first component is to collect relevant datasets of high quality.
+As is common in most big data research,
+these datasets constitute the most important resource for our proposed project.
+We plan to collect the following three data sources:
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+  \item Humor database. To understand what humor looks like, we will collect jokes from /r/jokes on Reddit as well as existing datasets released for the New Yorker caption contest.
+  \item Cultural references. To achieve a sense of humor, we need an understanding of our culture. One proxy of culture is through famous quotations on Wikiquotes. We will collect an up-to-date version of Wikiquotes and preprocess that into appropriate formats.
+  \item Audience information. As explained in \citet{house_slate}, to win the caption contest, it is important to understand the audience of The New Yorker magazine. Professor Thea Lindquist at University Libraries and the PI have discussed obtaining the New Yorker archival data as part of library resources.
+\end{itemize}
+
+
+
+
+\para{``Brainstorm suggestion'' model.}
+This is the most technically challenging part of our work.
+We propose at least two possible approaches.
+First, good brainstorm suggestions look different from normal data.
+By comparing cooccurring patterns between Wikiquotes/jokes and the New Yorker archival data, we can understand what patterns are relatively common in popular cultural references but are not in general textual data.
+However, this approach still requires frequent cooccurrences of good brainstorm suggestions in Wikiquotes/jokes, which limits the power of ``brainstorming''.
+To address this concern, our second approach further takes advantage of the word definitions in dictionaries and aims to learn why two words spark pleasant surprises in Wikiquotes/jokes.
+Such an approach can hopefully improve the recall of our computational model.
+
+\para{``Lexical choice suggestion'' model.} The process of identifying the most suitable word echoes the classic question of finding synonyms.
+We can use existing techniques such as word embeddings based on our collected datasets.
+More importantly, we will experiment with tunable suggestions that allow users to choose between different options such as rhyme and alliteration.
+
 \subsection{Writing Tasks}
+
+\begin{itemize}
+    \item Slogans.
+    \item Online advertisements.
+    \item Wikipedia pages.
+\end{itemize}
+
+Slogans present a challenge to writers distinct from that
+of writing a story: to generate a concise, memorable,
+and powerful statement that is representative of the object,
+organization, or idea it promotes and matches the intention of
+the authors. Slogans are used in a variety of settings, ranging
+from organizing a social movement to promoting a product.
+The process of condensing information into a memorable and
+informative phrase used to create slogans is paralleled in other
+tasks, such as writing headlines, titling papers, and naming
+products. Therefore, a system that supports slogan writing
+could likely be extended to related tasks that prioritize catchy
+and succinct language.
+
+
+For the slogan writing task, participants were asked to write
+a slogan for three distinct scenarios: a food packaging tool,
+the movie Her5, and a social cause that protests animal testing
+for cosmetic products. The prompts included descriptions and
+images, from which the participant had to invent an original
+slogan. Like in the story writing case, the task was either done
+alone or partnered with a machine in the loop. In the MIL
+condition, participants used a web interface (see Figure 4).
+Participants in the solo case worked in a blank Google Doc.
+When writing with the web interface, the writer must provide
+a few keywords and write an initial version of the slogan
+(Figure 4, section a). The writer can then “pull” machine
+suggestions at will (Figure 4, section b). Based on the
+writer’s input, the system suggests alternative slogans (Figure
+4, section c), and the history of the retrieved suggestions is
+tracked for future reference (Figure 4, section d). The system
+provides at most three suggestions in response to each request.
+The writer’s input is on the left, and machine suggestions are
+on the right, reducing the intrusiveness of the suggestions. A
+demo system is available at http://tremoloop.com.
