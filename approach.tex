@@ -62,30 +62,38 @@ If these suggestions are proven effective, it would be useful to develop more so
 \subsection{Content Suggestion}
 \label{sec:content}
 
-Based on user interviews in our preliminary experiments on slogan writing, we identify two distinct scenarios where lexical suggestions are useful.
+Based on user interviews in our prior work on slogan writing with individuals, we identify two distinct scenarios where content suggestions are useful.
 First, users may run out of ideas or struggle with proposing original ideas in the first place.
-Lexical suggestions at this stage functions as brainstorm sessions.
+Content suggestions at this stage functions as brainstorm sessions.
 It follows that the notion of relevant suggestions is intentionally vague and there does not exist {\em the} right word.
 We refer to such suggestions as ``{\em brainstorm suggestions}''.
-Second, users may find it difficult to identify the most appropriate word in a caption or a slogan.
+Second, users may find it difficult to identify the most appropriate word in a slogan.
 In this case, users already have a concrete idea and look for {\em the} word at a particular location.
-We refer to such suggestions as ``{\em lexical-choice suggestions}''.
+We refer to such suggestions as ``{\em wording suggestions}''.
 
-Compared to full-sentence suggestions, although grammaticality is no longer a concern, these two distinct suggestion modes require different computational models.
-In particular, ``brainstorm suggestions'' poses unique computational challenges from traditional natural language processing systems.
+% Compared to full-sentence suggestions, although grammaticality is no longer a concern, these two distinct suggestion modes require different computational models.
+Furthermore, as writing a sentence is not the main challenge reported in our prior work, we thus focus on lexical suggestions in this proposal.
+First, ``brainstorm suggestions'' poses unique computational challenges from traditional natural language processing systems.
 One key difference lies in that useful ``brainstorm'' suggestions usually do not frequently cooccur and makes NLP techniques that rely on cooccurring patterns much less effective.
 % This idea echoes the benign violation theory in humor \citep{warren_opinion:_2015}: violation in humor does not happen frequently in life and cannot be arbitrary.
-We propose the following three components to address these computational challenges.
+Second, ``wording suggestions'' connects with existing work on paraphrasing and lexical semantics in modeling synonyms, however, we need to paraphrase for a certain goal, e.g., being more catchy.
+We propose the following 
+% three 
+components to address these computational challenges.
 
 \para{Relevant data collection.} 
 The first component is to collect relevant datasets of high quality.
-As is common in most big data research,
+As is common in 
+% most big data
+AI research,
 these datasets constitute the most important resource for our proposed project.
-We plan to collect the following three data sources:
+We plan to collect the following data sources (these are designed for slogans; adaptation is required for other tasks):
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
-  \item Humor database. To understand what humor looks like, we will collect jokes from /r/jokes on Reddit as well as existing datasets released for the New Yorker caption contest.
-  \item Cultural references. To achieve a sense of humor, we need an understanding of our culture. One proxy of culture is through famous quotations on Wikiquotes. We will collect an up-to-date version of Wikiquotes and preprocess that into appropriate formats.
-  \item Audience information. As explained in \citet{house_slate}, to win the caption contest, it is important to understand the audience of The New Yorker magazine. Professor Thea Lindquist at University Libraries and the PI have discussed obtaining the New Yorker archival data as part of library resources.
+  \item Slogan database. To understand what slogan looks like, we will collect slogans from websites of top companies and Twitter profiles.
+  A classification task might be useful for achieving this goal.
+  \item Cultural references. Successful slogans also require an understanding of our culture. One proxy of culture is through famous quotations on Wikiquotes. We will collect an up-to-date version of Wikiquotes.
+  %  and preprocess that into appropriate formats.
+  % \item Audience information. As explained in \citet{house_slate}, to win the caption contest, it is important to understand the audience of The New Yorker magazine. Professor Thea Lindquist at University Libraries and the PI have discussed obtaining the New Yorker archival data as part of library resources.
 \end{itemize}
 
 
@@ -95,14 +103,16 @@ We plan to collect the following three data sources:
 This is the most technically challenging part of our work.
 We propose at least two possible approaches.
 First, good brainstorm suggestions look different from normal data.
-By comparing cooccurring patterns between Wikiquotes/jokes and the New Yorker archival data, we can understand what patterns are relatively common in popular cultural references but are not in general textual data.
-However, this approach still requires frequent cooccurrences of good brainstorm suggestions in Wikiquotes/jokes, which limits the power of ``brainstorming''.
-To address this concern, our second approach further takes advantage of the word definitions in dictionaries and aims to learn why two words spark pleasant surprises in Wikiquotes/jokes.
+By comparing cooccurring patterns between Wikiquotes/slogans and a background Wikipedia/newspaper data, we can understand what patterns are relatively common in popular cultural references but are not in general textual data.
+However, this approach still requires frequent cooccurrences of good brainstorm suggestions in Wikiquotes/slogans, which limits the power of ``brainstorming''.
+To address this concern, our second approach further takes advantage of the word definitions in dictionaries and aims to learn why two words spark pleasant surprises in Wikiquotes/slogans.
 Such an approach can hopefully improve the recall of our computational model.
+These brainstorm suggestions will hopefully open up ideas given queries from the team and spark discussions and new queries.
 
 \para{``Lexical choice suggestion'' model.} The process of identifying the most suitable word echoes the classic question of finding synonyms.
 We can use existing techniques such as word embeddings based on our collected datasets.
 More importantly, we will experiment with tunable suggestions that allow users to choose between different options such as rhyme and alliteration.
+An important challenge lies in identifying the useful dimensions for wording choices, such as provocativity, formality, and trendiness.
 
 \subsection{Writing Tasks}
 \label{sec:tasks}
