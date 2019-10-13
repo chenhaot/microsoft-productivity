@@ -7,32 +7,45 @@ Collaborative writing is ubiquitous, ranging from the creation of Wikipedia by m
 Thanks to tools such as Office 365, Google Doc, and Wikimedia, the process of collaborative writing is increasingly digitalized.
 However, there is limited {\em intelligent} support in this collaborative writing process.
 
+\chenhao{The exciting level of the introduction is kind of low.}
+
 We propose a general machine-in-the-loop framework to enable a team to collaborative effectively in the writing process, building on our prior work on creative writing with individuals \citep{clark+etal18}.
 In this case, our machine-in-the-loop systems are composed of a team of multiple people and a machine working together to create output (\figref{fig:MIL}). The team and machine are in a loop in which the team provides context and the machine responds with suggestions to the team (\figref{fig:MIL}~i). The team controls the final output (\figref{fig:MIL}~ii).
 We would like to emphasize a few points in this framework:
 1)  The team is the central agent. Machine learning systems in this framework are developed to assist humans in its best possible way rather than to outperform humans or achieve an absolute sense of intelligence.
 2)  In order for this process to be successful, the suggestions made by the machine should be helpful, but do not need to be directly copied as final outcomes.
 In other words, we emphasize increasing productivity over building intelligent AI.
+\chenhao{should emphasize collaboration a bit more if we are submitting for human collaboration.}
 
 
 
-
-This proposal presents computational approaches to generating appropriate suggestions in the collaborative writing process and designs large-scale user studies to understand the role of an intelligent machine in the writing process and evaluate the effectiveness of machine-in-the-loop approaches.
+This proposal presents computational approaches to generating appropriate suggestions in the collaborative writing process and designs large-scale user studies to understand the role of an intelligent machine in the collaborative writing process and evaluate the effectiveness of machine-in-the-loop approaches.
 \chenhao{we should try to emphasize why this is different from clippy.}
-
+We consider two types of suggestions:
+1) collaboration suggestions that aim to improve the work-flow in the collaborative writing process by recommending topics and structures of collaboration;
+2) content suggestions that help the human team overcome cognitive inertia.
 Preliminary findings from our pilot study on slogan writing with a machine in the loop motivate us to pursue lexical suggestions instead of full-sentence suggestions in this proposal.
-Lexical suggestions can help humor generation at least in two ways.
-First, in the early stage of writing, some words can help brainstorm ideas, e.g., relevant keywords that violate common norms but remain benign according to benign violation theory.
-Second, after a writer has a version of text, lexical suggestion can help the writer identify the most appropriate word in terms of sentiment, connotation, rhyme, alliteration, etc.
+Lexical suggestions can help least in two ways.
+First, in the early stage of writing, some words can help brainstorm ideas, e.g., relevant keywords that violate common norms but remain benign according to benign violation theory \citep{warren_opinion:_2015}.
+Second, lexical suggestion can help the team identify the most appropriate word in terms of sentiment, connotation, rhyme, alliteration, etc.
 It also removes the concern of grammaticality for generating full sentences.
 
 Our experimental evaluations considers multiple writing tasks (i.e., slogans, online advertisements, and Wikipedia pages) and experimental settings to evaluate the proposed computational suggestions.
-Most of our experiments.
+We will focus on synchronous collaboration between two people and explore the design space of pull vs. push in offering suggestions.
+Our experiments will answer the following key research questions:
+1) {\em how collaboration suggestions shape the collaboration process};
+2) {\em how content suggestions assist human teams in different stages of writing};
+3) {\em how collaboration suggestions and content suggestions complement each other in collaborative process}.
+In addition to pilot studies with college students and large-scale user studies with Mechanical Turkers, we will also explore realistic collaboration with Wikipedia contributors.
 
 % \subsection{Connection to Productivity}
 
 \subsection{Expected Results and Broader Impacts}
 
-\para{Expected results.}
+\para{Expected results.} We expect to build a collaborative writing webapp that can serve as a common experimentation platform for future research in machine-in-the-loop collaborative writing.
+We will also contribute novel computational algorithms/models for providing collaboration and content suggestions.
+Finally, our experiments will reveal insights about human-machine collaboration in the writing space.
 
-\para{Broader impacts.} These proposed computational models hold the promise to improve our understanding of humor generation and potentially transform humor generation and creative writing. This grant will support the training of graduate students and lead to publications in top venues and public datasets and creative artifacts such as websites and open source repositories.
+\para{Broader impacts.} The proposed research will promote the positive role of AI in our society.
+By focusing on a ubiquitous yet understudied domain, collaborative writing, the proposed research will lay the foundation for future research in this area.
+Given that one of our proposed task is to write Wikipedia pages, it also holds promise in contributing directly to a significant non-profit efforts on the Internet.
