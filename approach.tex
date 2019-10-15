@@ -131,7 +131,7 @@ The first component is to collect relevant datasets of high quality.
 As is common in 
 % most big data
 AI research,
-these datasets constitute the most important resource for our proposed project.
+these datasets constitute the most important resource for our proposed approach.
 We plan to collect the following data sources (these are designed for slogans; adaptation is required for other tasks):
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
   \item Slogan database. To understand what slogan looks like, we will collect slogans from websites of top companies and Twitter profiles.
@@ -150,11 +150,17 @@ We propose at least two possible approaches.
 First, good brainstorm suggestions look different from normal data.
 By comparing cooccurring patterns between Wikiquotes/slogans and a background Wikipedia/newspaper data, we can understand what patterns are relatively common in popular cultural references but are not in general textual data.
 However, this approach still requires frequent cooccurrences of good brainstorm suggestions in Wikiquotes/slogans, which limits the power of ``brainstorming''.
-To address this concern, our second approach further takes advantage of the word definitions in dictionaries and aims to learn why two words spark pleasant surprises in Wikiquotes/slogans.
-Such an approach can hopefully improve the recall of our computational model.
-These brainstorm suggestions will hopefully open up ideas given queries from the team and spark discussions and new queries.
+To address this concern, our second approach further 
+% takes advantage of 
+leverage the word definitions in dictionaries and 
+% aims to learn 
+addresses why two words spark pleasant surprises in Wikiquotes/slogans.
+Such an approach 
+% can hopefully 
+might improve the recall of our computational model.
+% These brainstorm suggestions will hopefully open up ideas given queries from the team and spark discussions and new queries.
 
-\para{``Lexical choice suggestion'' model.} The process of identifying the most suitable word echoes the classic question of finding synonyms.
+\para{``Lexical choice suggestion'' model.} The process of identifying the most suitable word echoes the classic question of finding synonyms \citep{turney2008uniform}.
 We can use existing techniques such as word embeddings based on our collected datasets.
 More importantly, we will experiment with tunable suggestions that allow users to choose between different options such as rhyme and alliteration.
 An important challenge lies in identifying the useful dimensions for wording choices, such as provocativity, formality, and trendiness.
@@ -164,15 +170,18 @@ An important challenge lies in identifying the useful dimensions for wording cho
 
 In addition to the slogan writing task, we consider the following two tasks:
 
-\para{Online advertisements for search engine.} Another task is to draft a message for online advertisement.
-Although this task is similar to slogan writing task,
-participants may find this task much more approachable given the common exposure.
+\para{Online advertisements for search engines.} 
+% Another task is to draft a message for online advertisement.
+Although drafting online advertisements is somewhat similar to writing slogans,
+participants may find it more approachable given the common exposure.
 Another advantage of this task is that the evaluation can be done using metrics such as click-through rates via online platforms.
 
-\para{Wikipedia pages.} Wikipedia is arguable the most successful collaborative writing project online.
+\para{Wikipedia pages.} Wikipedia is arguably the most successful collaborative writing project online.
 Our final task of choice is to ask a small team to create a new Wikipedia page.
-Depending on how successful our initial experiment is, we can even recruit participants from Wikipedia.
-The key advantage of this task is that it can be directly integrated to a successful platform, however, writing a complete Wikipedia page can be challenging for crowd workers.
+Depending on how successful our initial experiment is, we can potentially recruit participants from Wikipedia.
+A key advantage of this task is that its direct relevance to a successful platform.
+Although writing a complete Wikipedia page is challenging for crowdworkers,
+we believe that it is promising given recent success in exploring micro tasks in collaborative writing \citep{teevan2016supporting,salehi2017communicating}.
 
 % \begin{itemize}
 %     \item Slogans.
