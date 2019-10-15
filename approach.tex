@@ -24,7 +24,7 @@ We further present alternative writing tasks in \secref{sec:tasks}.
 \subsection{Collaboration Suggestion}
 \label{sec:workflow}
 
-\my{I changed the following a bit to make 3.1 and 4.1 more align with each other.}
+%\my{I changed the following a bit to make 3.1 and 4.1 more align with each other.}
 We first consider suggestions that shape the collaboration process.
 A key difference between collaborative writing and individual writing lies in these multi-person collaborations which can lead to dramatically different outcomes
 depending on whether the collaborative process is successful.
@@ -33,14 +33,17 @@ Therefore, it is important to think about possible suggestions that computationa
 % cold start: 
 % we can define heuristics to support initial experiments.
 
-We highlight three types of suggestions on various aspect of collaboration that a machine can offer:
+We consider three types of suggestions on various aspect of collaboration that a machine can offer:
 %We consider the following four types of collaboration suggestions (we also provide simple heuristic algorithms for providing them):
 
 \begin{itemize}
-	\item {\em Flow of collaboration}. Suggestions on how the team should decompose the grand writing task into a sequence of subtasks. Such suggestions can enable the team to address the complex writing task by defining and working on a series of smaller-sized, more manageable tasks, in an organized way. In was showed in~\cite{bernstein2010soylent}, for example, that a well-designed workflow can help guide a group of laypeople to work together and accomplish high-quality text proofreading. 
-	\item {\em Division of labor / Work sharing}. Suggestions on whether and how the team should divide the workload among the team members. \my{Why it may be helpful + Reference}
-	\item {\em Pace of Work}. Suggestions on whether adjustment of work pace (e.g., speed up, take a break, etc.) is needed. For example, a suggestion that ask the team to take a break and simply talk to each other/ do something entirely irrelevant to writing may help them mitigate the fatigue and overcome cognitive inertia in the writing process~\citep{dai2015and}.
+	\item {\bf Flow of collaboration}. Suggestions on how the team should decompose the grand writing task into a sequence of subtasks. Such suggestions can enable the team to address the complex writing task by defining and working on a series of smaller-sized, more manageable tasks, in an organized way. In was showed in~\cite{bernstein2010soylent}, for example, that a well-designed workflow can help guide a group of laypeople to work together and accomplish high-quality text proofreading. 
+	\item {\bf Division of labor / Work sharing}. Suggestions on whether and how the team should divide the workload among the team members. \my{Why it may be helpful + Reference}
+	\item {\bf Pace of Work}. Suggestions on whether adjustment of work pace (e.g., speed up, take a break, etc.) is needed. For example, a suggestion that ask the team to take a break and simply talk to each other/ do something entirely irrelevant to writing may help them mitigate the fatigue and overcome cognitive inertia in the writing process~\citep{dai2015and}.
 \end{itemize}
+
+There are many factors that can potentially influence the effectiveness of machine-generated collaboration suggestions on the above aspects. We highlight two of them in this proposal---{\em what to suggest} (i.e., suggestion content) and {\em when to suggest} (i.e., suggestion timing). On both factors, suggestions can be designed based on simple heuristics (e.g., always suggest a team working on a task of slogan writing to follow the default workflow of idea brainstorming--candidate slogan generation--rank and wording refine, or always provide a work sharing suggestion when it is observed that team members only work in their individual space and there is no activity in the collaborative space, etc.). More intelligent suggestions that tailor to the needs of different teams and adaptively adjust over time based on the work progress can also be designed if sufficient data is collected to enable the reasoning about most effective suggestion content and timing. We will describe in Section~\ref{sec:exp1} on how behavioral experiments will be conducted to understand the effectiveness of various collaboration suggestions.
+
 
 %%% Tan's version
 
