@@ -7,7 +7,7 @@
 % We consider two types of suggestions.
 
 In this section, we introduce the computational approaches to provide suggestions in the collaborative writing process.
-We consider two types of suggestions: 1) collaboration suggestions that focuses on improving the work-flow;
+We consider two types of suggestions: 1) collaboration suggestions that focuses on improving the work flow;
 2) content suggestions that aim to provide direct writing support.
 
 To situate our discussion, we use the slogan writing task as our running example in \secref{sec:workflow} and \ref{sec:content}.
@@ -17,7 +17,7 @@ organization, or idea that it promotes.
 We choose this task because slogans are used in a variety of settings, ranging
 from organizing a social movement to promoting a product.
 The process of condensing information into a memorable and
-informative phrase used to create slogans is common across many teams both in non-profit organizations and the marketing industry.
+informative phrase used to create slogans is common across many human teams both in non-profit organizations and the marketing industry.
 We further present alternative writing tasks in \secref{sec:tasks}.
 
 
@@ -36,13 +36,39 @@ Therefore, it is important to think about possible suggestions that computationa
 We consider three types of suggestions on various aspect of collaboration that a machine can offer:
 %We consider the following four types of collaboration suggestions (we also provide simple heuristic algorithms for providing them):
 
-\begin{itemize}
+
+\begin{itemize}[leftmargin=*]
 	\item {\bf Flow of collaboration}. Suggestions on how the team should decompose the grand writing task into a sequence of subtasks. Such suggestions can enable the team to address the complex writing task by defining and working on a series of smaller-sized, more manageable tasks, in an organized way. In was showed in~\cite{bernstein2010soylent}, for example, that a well-designed workflow can help guide a group of laypeople to work together and accomplish high-quality text proofreading. 
 	\item {\bf Division of labor / Work sharing}. Suggestions on whether and how the team should divide the workload among the team members. \my{Why it may be helpful + Reference}
 	\item {\bf Pace of Work}. Suggestions on whether adjustment of work pace (e.g., speed up, take a break, etc.) is needed. For example, a suggestion that ask the team to take a break and simply talk to each other/ do something entirely irrelevant to writing may help them mitigate the fatigue and overcome cognitive inertia in the writing process~\citep{dai2015and}.
+
+% \begin{itemize}[leftmargin=*]
+%     \item Discussion break. The first type of suggestions that we consider is that we simply encourage the team to talk to each other.
+%     Taking such a break may help team members overcome cognitive inertia in the writing process.
+%     \chenhao{need to read more references on this}
+%     A heuristics to recommend discussion breaks can be that there has been too little or too significance changes in each team member's working board.
+%     \chenhao{so we should kind of design an individual working space in addition to the collaborating space.}
+%     \item Divide-and-conquer (task assignment discussion).
+%     The second type of suggestions asks team members to have meta discussions on how to split the task.
+%     Such a discussion allows participants to collaboratively,
+%     It remains an open question whether a team can come up with effective divde-and-conquer strategy on their own.
+%     We can recommend this suggestion at the beginning of an experiment or when we detect similar effort duplicating in individual working boards.
+%     \chenhao{or we can just recommend them to work together all the time.}
+%     \item Work sharing. In addition, we can directly encourage team members to work in the collaborative space.
+%     Organic discussions might start when multiple individuals work in a space together.
+%     This suggestion can be activated when too much time has been spent individually.
+%     \item Structured collaboration.
+%     Finally, one possible suggestion is to ask the team to work according to pre-designed collaboration process.
+%     For instance, we can ask the team to first have a high-level discussion about the goal of writing, i.e., what makes a nice slogan.
+%     They can then brainstorm initial ideas for possible materials to include.
+%     After working individually to generate candidate slogans, they will work together to rank candidate slogans and refine the wording.
+%     Such a suggestion can be offered at the beginning of an experiment.
+% 
 \end{itemize}
 
 There are many factors that can potentially influence the effectiveness of machine-generated collaboration suggestions on the above aspects. We highlight two of them in this proposal---{\em what to suggest} (i.e., suggestion content) and {\em when to suggest} (i.e., suggestion timing). On both factors, suggestions can be designed based on simple heuristics (e.g., always suggest a team working on a task of slogan writing to follow the default workflow of idea brainstorming--candidate slogan generation--rank and wording refine, or always provide a work sharing suggestion when it is observed that team members only work in their individual space and there is no activity in the collaborative space, etc.). More intelligent suggestions that tailor to the needs of different teams and adaptively adjust over time based on the work progress can also be designed if sufficient data is collected to enable the reasoning about most effective suggestion content and timing. We will describe in Section~\ref{sec:exp1} on how behavioral experiments will be conducted to understand the effectiveness of various collaboration suggestions.
+
+
 
 
 %%% Tan's version
