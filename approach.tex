@@ -34,14 +34,14 @@ Therefore, our first thrust is to develop computational methods for offering sug
 % cold start: 
 % we can define heuristics to support initial experiments.
 
-We consider three types of suggestions on various aspect of collaboration that a machine can offer:
+We consider three types of suggestions on various aspects of collaboration that a machine can offer:
 %We consider the following four types of collaboration suggestions (we also provide simple heuristic algorithms for providing them):
 
 
 \begin{itemize}[leftmargin=*]
 	\item {\bf Flow of collaboration}. Suggestions on how the team should decompose the grand writing task into a sequence of subtasks. Such suggestions can enable the team to address the complex writing task by defining and working on a series of smaller-sized, more manageable tasks, in an organized way. It was shown in~\citet{bernstein2010soylent}, for example, that a well-designed workflow can help guide a group of laypeople to work together and accomplish high-quality text proofreading. 
 	\item {\bf Division of labor / Work sharing}. Suggestions on whether and how the team should divide the workload among the team members. 
-    While organic discussions might start when multiple individuals work in a space together similar to Office 365 or Google doc,
+    While organic discussions might start when multiple individuals work in a shared space, similar to Office 365 or Google doc,
     it is useful to think about how such discussions affect patterns of contribution.
     For instance, \citet{wang2017users} find that ``some users believe that writing should be a private activity because they do not want to be judged or distracted during the thought process''.
     % \citet{birnholtz2013write} found that participants with more utterances tend to make more minor edits.
@@ -72,7 +72,7 @@ We consider three types of suggestions on various aspect of collaboration that a
 % 
 \end{itemize}
 
-There are many factors that can potentially influence the effectiveness of machine-generated collaboration suggestions on the above aspects. We highlight two of them in this proposal --- {\em what to suggest} (i.e., suggested actions) and {\em when to suggest} (i.e., suggestion timing). On both factors, suggestions can be designed based on simple heuristics (e.g., always suggest a team working on a task of slogan writing to follow the default workflow of idea brainstorming $\rightarrow$ candidate slogan generation $\rightarrow$ rank and wording refine, or always provide a work sharing suggestion when it is observed that team members only work in their individual space and there is no activity in the collaborative space, etc.). More intelligent suggestions that tailor to the needs of different teams and adaptively adjust over time based on the work progress can also be designed if sufficient data is collected to enable the reasoning about most effective suggestion content and timing. We will describe in Section~\ref{sec:exp1} on how behavioral experiments will be conducted to understand the effectiveness of various collaboration suggestions.
+There are many factors that can potentially influence the effectiveness of machine-generated collaboration suggestions on the above aspects. We highlight two of them in this proposal --- {\em what to suggest} (i.e., suggested actions) and {\em when to suggest} (i.e., suggestion timing). On both factors, suggestions can be designed based on simple heuristics (e.g., always suggest a team working on a task of slogan writing to follow the default workflow of idea brainstorming $\rightarrow$ candidate slogan generation $\rightarrow$ rank and wording refine, or always provide a work sharing suggestion when it is observed that team members only work in their individual space and there is no activity in the collaborative space, etc). More intelligent suggestions that tailor to the needs of different teams and adaptively adjust over time based on the work progress can also be designed if sufficient data is collected to enable the reasoning about most effective suggestion content and timing. We will describe in Section~\ref{sec:exp1} on how behavioral experiments will be conducted to understand the effectiveness of various collaboration suggestions.
 
 
 
@@ -117,7 +117,7 @@ In this case, users already have a concrete idea and look for {\em the} word at 
 We refer to such suggestions as ``{\em wording suggestions}''.
 
 % Compared to full-sentence suggestions, although grammaticality is no longer a concern, these two distinct suggestion modes require different computational models.
-Furthermore, as writing a sentence is not the main challenge reported in our prior work, we thus focus on lexical suggestions in this proposal.
+Furthermore, we focus on {\em lexical} suggestions in this proposal because writing a sentence is not the main challenge reported in our prior work.
 First, ``brainstorming suggestions'' poses unique computational challenges from traditional natural language processing systems.
 One key difference lies in that useful brainstorming suggestions usually do not frequently cooccur and makes NLP techniques that rely on cooccurring patterns much less effective.
 % This idea echoes the benign violation theory in humor \citep{warren_opinion:_2015}: violation in humor does not happen frequently in life and cannot be arbitrary.
@@ -131,7 +131,7 @@ The first component is to collect relevant datasets of high quality.
 As is common in 
 % most big data
 AI research,
-these datasets constitute the most important resource for our proposed approach.
+these datasets constitute the most important resources for our proposed approach.
 We plan to collect the following data sources (these are designed for slogans; adaptation is required for other tasks):
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
   \item Slogan database. To understand what slogan looks like, we will collect slogans from websites of top companies and Twitter profiles.
