@@ -2,33 +2,40 @@
 
 \section{Related Work}
 
-\chenhao{cite more CHI work here}
+% \chenhao{cite more CHI work here}
 
-\citep{birnholtz2013write}
+Collaborative writing has attracted significant interest from computer science for decades as writing is increasingly a digitalized process \citep{sharples1993research}.
+In particular, researchers have worked on understanding the practice of collaborative writing  \citep{birnholtz2013write,wang2017users} and exploring the feasibility of crowdsourcing by splitting the writing process into micro tasks \citep{bernstein2010soylent,teevan2016supporting,salehi2017communicating}. 
+Thanks to the recent progress in AI enabled by deep learning, researchers started to explore the role of intelligent support in writing \citep{gehrmann2015deploying}, include PI Tan's prior work \citep{clark+etal18}, which we will elaborate to provide the context for this work.
 
 \para{Prior work.} We conducted a pilot study with 18 participants in \citet{clark+etal18} on slogan writing.
-\chenhao{feel free to shorten this part.}
+% \chenhao{feel free to shorten this part.}
 % Slogan writing presents a challenge to writers that is similar to humor generation: to generate a concise, memorable, and powerful sentence that is representative of the object it promotes and matches the intention of the authors. 
 % Slogans are used for promotion in a variety of settings, ranging from organizing a social movement to promoting a product. 
 % Success in machine-in-the-loop systems for slogan writing and humor generation can lead to potential paradigm changes in many domains of creative writing.
 % a system that supports slogan writing could be extended to several related tasks that prioritize catchy and succinct language.
-We asked all participants to write slogans for three scenarios.
+We asked all participants to write slogans for three scenarios (food packaging tool,
+the movie ``Her'', and a social cause that protests animal testing
+for cosmetic products).
 Half of them wrote with a machine in the loop ({\em treatment}), while the other half wrote on their own ({\em control}).
 We asked participants to assess the writing process and their final slogans, and answer open-ended questions in an interview.
 We also collected third-party evaluations of each slogan from Amazon Mechanical Turk.
 % The machine learning system adopts an iterative design that is not intrusive and uses pull-based suggestions.
-One key difference from this proposal is that the machine learning system generates {\bf full-sentence suggestions}.
-Here we highlight the most relevant findings.
-% Our results show that (for space reasons, including only three findings):
+Overall, our preliminary findings suggest that machine-in-the-loop systems for creative writing are promising: 1) participants generally found the writing process more engaging and more fun with a machine in the loop;
+2) participants with a machine in the loop generally rated their own slogans better than the control group (although there is no difference in third-party evaluation).
+These results motivate us to pursue machine-in-the-loop collaborative writing.
+% , however, the computational model requires improvement. 
+% Here we highlight the most relevant findings.
+% % Our results show that (for space reasons, including only three findings):
 
 
-\begin{enumerate}[leftmargin=*,noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
-    \item Users generally found the writing process more engaging and more fun with a machine in the loop.
-    \item Users with a machine in the loop generally rated their own slogans better than the control group, but there is no difference in third-party evaluation.
-    \item Users gave low ratings to the suggestions in every aspect, especially regarding relevance (see \figref{fig:user}).
-\end{enumerate}
+% \begin{enumerate}[leftmargin=*,noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+%     \item Users generally found the writing process more engaging and more fun with a machine in the loop.
+%     \item Users with a machine in the loop generally rated their own slogans better than the control group, but there is no difference in third-party evaluation.
+%     \item Users gave low ratings to the suggestions in every aspect, especially regarding relevance (see \figref{fig:user}).
+% \end{enumerate}
 
 % We draw insights from quantitative ratings from participants and qualitative interviews with users to improve our machine learning systems that generate suggestions.
 % To motivate our proposed ideas in this proposal, we give a brief overview of the computational model in the slogan writing machine learning system.
-Overall, our preliminary findings suggest that machine-in-the-loop systems for creative writing are promising, however, the computational model requires improvement. 
+In addition to focusing on individual writing, another key difference from this proposal is that the machine learning system generates {\bf full-sentence suggestions}.
 In fact, many participants point out in the interviews that keyword suggestions may be much more useful.
